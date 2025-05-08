@@ -1,7 +1,7 @@
 using Lab_8;
 using System.Diagnostics;
 
-namespace Lab_7
+namespace Lab_8
 {
     public partial class Form1 : Form
     {
@@ -84,7 +84,6 @@ namespace Lab_7
             {
                 String inputData = nameBox.Text + " " + price.Value.ToString() + " " +
                     cntUsers.Value.ToString();
-
                 _presenter.add(inputData);
                 clearAllFields(nameBox, price, cntUsers);
             }
@@ -93,6 +92,17 @@ namespace Lab_7
                 MessageBox.Show(ex.Message);
             }
         }
+
+        public void updateData(InternerOperatorList dataBase)
+        {
+            clearAllFields(nameSelector, newPrice, newCntUsers);
+            nameSelector.Items.Clear();
+            foreach (var element in dataBase)
+            {
+                nameSelector.Items.Add(element.NameOperator);
+            }
+        }
+
     }
 }
 

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab_7
+namespace Lab_8
 {
     // Класс содержит регулярные выражения для проверки вводимых данных.
     public static class Regs

@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Lab_7;
+using Lab_8;
 
-namespace Lab_7
+namespace Lab_8
 {
     // Константы Интернет оператора
     public static class IntOperConsts

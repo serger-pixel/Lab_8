@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab_7
+namespace Lab_8
 {
     // Абстрактный класс, который предоставляет статические методы для управления данными.
     public class Presenter
@@ -19,6 +19,7 @@ namespace Lab_7
         public Presenter(Form1 form)
         {
             _service = new Service();
+            _form = form;
         }
 
         // Возвращает коллекцию данных (список интернет операторов) из сервиса.
@@ -32,6 +33,7 @@ namespace Lab_7
         {
             _service.checkData(inputData);
             _service.add(inputData);
+            _form.updateData(getDataBase());
         }
 
         // Обновляет существующую запись в коллекции данных. 

@@ -3,7 +3,7 @@ using System.Drawing.Printing;
 using System.Windows.Forms;
 using System.Xml.Linq;
 
-namespace Lab_7
+namespace Lab_8
 {
     partial class Form1
     {
@@ -182,6 +182,7 @@ namespace Lab_7
             createButton.TabIndex = 6;
             createButton.Text = "Создать";
             createButton.UseVisualStyleBackColor = true;
+            createButton.Click += createButton_Click;
             // 
             // label3
             // 

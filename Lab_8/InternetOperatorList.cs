@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace Lab_7
+namespace Lab_8
 {
     public class InternerOperatorList : IList<InternetOperator>
     {
