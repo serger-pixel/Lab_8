@@ -40,7 +40,7 @@ namespace Lab_8
             {
                 String name = nameSelector.Text;
                 _presenter.remove(name);
-                nameSelector.Items.RemoveAt(0);
+                nameSelector.Items.Remove(name);
                 clearAllFields(nameSelector, newPrice, newCntUsers);
             }
             catch (Exception ex)
@@ -65,7 +65,6 @@ namespace Lab_8
 
         public void clearAllFields(ComboBox name, NumericUpDown price, NumericUpDown cntUsers)
         {
-            name.SelectedIndex = -1;
             name.Text = "";
             clearPriceAndCnt(price, cntUsers);
         }
