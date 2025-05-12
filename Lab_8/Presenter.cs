@@ -22,10 +22,15 @@ namespace Lab_8
             _form = form;
         }
 
-        // Возвращает коллекцию данных (список интернет операторов) из сервиса.
-        public InternerOperatorList getDataBase()
+        // Возвращает коллекцию данных (список имён интернет операторов) из сервиса.
+        public List<String> getData()
         {
-            return _service._dataBase;
+            List<String> data = new List<String>();
+            foreach (var el in _service._dataBase) 
+            {
+                data.Add(el.NameOperator);
+            }
+            return data;
         }
 
         // Добавляет новую запись в коллекцию данных после проверки её корректности.
@@ -33,7 +38,7 @@ namespace Lab_8
         {
             _service.checkData(inputData);
             _service.add(inputData);
-            _form.updateData(getDataBase());
+            _form.updateData(getData());
         }
 
         // Обновляет существующую запись в коллекции данных. 

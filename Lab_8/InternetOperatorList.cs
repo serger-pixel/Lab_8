@@ -2,6 +2,7 @@
 
 namespace Lab_8
 {
+
     public class InternerOperatorList : IList<InternetOperator>
     {
         // Приватное поле для хранения списка интернет операторов.

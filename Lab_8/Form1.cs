@@ -93,13 +93,13 @@ namespace Lab_8
             }
         }
 
-        public void updateData(InternerOperatorList dataBase)
+        public void updateData(List<String> data)
         {
             clearAllFields(nameSelector, newPrice, newCntUsers);
             nameSelector.Items.Clear();
-            foreach (var element in dataBase)
+            foreach (var element in data)
             {
-                nameSelector.Items.Add(element.NameOperator);
+                nameSelector.Items.Add(element);
             }
         }
 
